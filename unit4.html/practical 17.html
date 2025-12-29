@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mouse & Keyboard Events</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .active {
+      background-color: dodgerblue;
+      color: white;
+    }
+
+    #box {
+      width: 200px;
+      height: 100px;
+      border: 2px solid #333;
+      margin-top: 20px;
+      padding: 10px;
+      transition: 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Mouse & Keyboard Events</h2>
+
+  <button id="toggleBtn">Toggle Show / Hide</button>
+
+  <div id="box">
+    Hover, Click or Press Keys 👇
+  </div>
+
+  <p>Press <b>H</b> to hide/show box</p>
+  <p>Press <b>A</b> to toggle active style</p>
+
+  <script>
+    const box = document.getElementById("box");
+    const btn = document.getElementById("toggleBtn");
+    btn.addEventListener("click", () => {
+      box.classList.toggle("hidden");
+    });
+    box.addEventListener("mouseenter", () => {
+      box.style.borderColor = "green";
+    });
+
+    box.addEventListener("mouseleave", () => {
+      box.style.borderColor = "#333";
+    });
+    box.addEventListener("dblclick", () => {
+      box.classList.toggle("active");
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "h" || event.key === "H") {
+        box.classList.toggle("hidden");
+      }
+
+      if (event.key === "a" || event.key === "A") {
+        box.classList.toggle("active");
+      }
+    });
+  </script>
+
+</body>
+</html>

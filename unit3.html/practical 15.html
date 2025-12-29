@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Manipulation Demo</title>
+</head>
+<body>
+
+<h2 id="header">Hello, World!</h2>
+<p class="message">This is a sample paragraph.</p>
+<button onclick="changeContent()">Click to Change Content</button>
+
+<script>
+function changeContent() {
+
+  document.getElementById('header').innerHTML = "Header Changed!";
+  document.querySelector('.message').innerHTML = "Paragraph Updated via querySelector.";
+  document.querySelector('body').innerHTML += "<p>New paragraph added!</p>";
+}
+</script>
+
+</body>
+</html>

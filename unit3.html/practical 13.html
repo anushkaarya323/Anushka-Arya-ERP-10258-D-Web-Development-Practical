@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Functions & Scope Demo</title>
+</head>
+<body>
+
+<h2>Functions & Scope Demo</h2>
+<button onclick="demo()">Run Demo</button>
+<pre id="output"></pre>
+
+<script>
+  
+  function add(a, b) {
+    return a + b;
+  }
+
+  function demo() {
+    var x = 10;   
+    let y = 20;   
+    const z = 30; 
+    if (true) {
+      var x = 100; 
+      let y = 200;
+      const z = 300; 
+    }
+
+    const sum = add(5, 7); 
+    document.getElementById('output').innerText =
+      `Sum of 5 + 7 = ${sum}\n` +
+      `var x = ${x} (changed by if block)\n` +
+      `let y = ${y} (unchanged)\n` +
+      `const z = ${z} (unchanged)`;
+  }
+</script>
+
+</body>
+</html>

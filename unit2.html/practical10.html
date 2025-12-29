@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Div and Span Layout</title>
+  <style>
+    
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+   
+    .header,
+    .footer {
+      background-color: #222;
+      color: white;
+      padding: 16px;
+      text-align: center;
+    }
+
+    
+    .content {
+      display: flex;
+      gap: 16px;
+      padding: 16px;
+    }
+
+   
+    .card {
+      background-color: #fff;
+      padding: 16px;
+      flex: 1;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    
+    .highlight {
+      color: #4da3ff;
+      font-weight: bold;
+    }
+
+    .emphasis {
+      color: #d9534f;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="header">
+      Welcome to <span class="highlight">My Website</span>
+    </div>
+
+    <div class="content">
+      <div class="card">
+        <h2>Card One</h2>
+        <p>
+          This is a <span class="emphasis">simple example</span> using div and span.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Card Two</h2>
+        <p>
+          Layout is handled by <span class="emphasis">div elements</span>.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      © 2025 <span class="highlight">Your Name</span>
+    </div>
+  </div>
+</body>
+</html>

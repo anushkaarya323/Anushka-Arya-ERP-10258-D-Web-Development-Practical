@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Create & Manipulate</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    ul {
+      margin-top: 15px;
+    }
+
+    li {
+      padding: 5px;
+      margin: 3px 0;
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>DOM Manipulation</h2>
+
+  <button id="add">Add Item</button>
+  <button id="remove">Remove Last</button>
+  <button id="change">Modify First</button>
+
+  <ul id="list"></ul>
+
+  <script>
+    const list = document.getElementById("list");
+    let count = 1;
+    document.getElementById("add").addEventListener("click", () => {
+      const li = document.createElement("li");   
+      li.textContent = "Item " + count++;        
+      list.appendChild(li);                     
+    });
+    document.getElementById("remove").addEventListener("click", () => {
+      if (list.lastElementChild) {
+        list.removeChild(list.lastElementChild);
+      }
+    });
+    document.getElementById("change").addEventListener("click", () => {
+      if (list.firstElementChild) {
+        list.firstElementChild.textContent = "Modified Item";
+        list.firstElementChild.style.background = "lightgreen";
+      }
+    });
+  </script>
+
+</body>
+</html>

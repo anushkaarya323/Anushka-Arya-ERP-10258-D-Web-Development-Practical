@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Conditional & Loop Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 50px;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input[type="number"], button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #4da3ff;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3380d6;
+    }
+
+    .output {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #eef;
+      border-radius: 5px;
+      white-space: pre-line; 
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Conditional & Loop Demo</h2>
+
+  <input type="number" id="number" placeholder="Enter a number">
+  <button onclick="checkNumber()">Check Number</button>
+  <button onclick="generateMultiples()">Generate Multiples</button>
+
+  <div class="output" id="output">Output will appear here</div>
+</div>
+
+<script>
+  
+  function checkNumber() {
+    const num = parseInt(document.getElementById('number').value);
+    let message = "";
+
+    if (isNaN(num)) {
+      message = "Please enter a valid number!";
+    } else if (num > 0) {
+      message = num + " is positive.";
+    } else if (num < 0) {
+      message = num + " is negative.";
+    } else {
+      message = "The number is zero.";
+    }
+
+    document.getElementById('output').innerText = message;
+  }
+ 
+  function generateMultiples() {
+    const num = parseInt(document.getElementById('number').value);
+    if (isNaN(num)) {
+      document.getElementById('output').innerText = "Please enter a valid number!";
+      return;
+    }
+
+    let multiples = "First 10 multiples of " + num + ":\n";
+
+    for (let i = 1; i <= 10; i++) {
+      multiples += num + " × " + i + " = " + (num * i) + "\n";
+    }
+
+    document.getElementById('output').innerText = multiples;
+  }
+</script>
+
+</body>
+</html>

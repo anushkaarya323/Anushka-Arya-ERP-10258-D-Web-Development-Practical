@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selectors Demonstration</title>
+
+  <style>
+    
+    * {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    
+    #main-title {
+      background-color: #2c3e50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+   
+    .box {
+      border: 2px solid #3498db;
+      padding: 15px;
+      margin: 20px;
+      border-radius: 8px;
+      background-color: #ecf0f1;
+    }
+
+   
+    .box p {
+      color: #2c3e50;
+      font-size: 16px;
+    }
+ 
+    h2, h3 {
+      color: #e74c3c;
+      margin-bottom: 10px;
+    }
+
+    
+    body {
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 id="main-title">CSS Selectors Example</h1>
+
+  <div class="box">
+    <h2>Class Selector</h2>
+    <p>This paragraph is styled using a <strong>descendant selector</strong>.</p>
+  </div>
+
+  <div class="box">
+    <h3>Another Box</h3>
+    <p>Both boxes use the same <strong>class selector</strong>.</p>
+  </div>
+
+</body>
+</html>

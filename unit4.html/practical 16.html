@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show Hide & Toggle Class</title>
+
+  <style>
+    .hidden {
+      display: none;
+    }
+    .active {
+      background-color: green;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    #box {
+      margin-top: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="toggleElement()">Toggle Show / Hide</button>
+  <button onclick="toggleStyle()">Toggle CSS Class</button>
+
+  <div id="box">
+    Hello! I am a box.
+  </div>
+
+  <script>
+    function toggleElement() {
+      document.getElementById("box").classList.toggle("hidden");
+    }
+
+    function toggleStyle() {
+      document.getElementById("box").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
