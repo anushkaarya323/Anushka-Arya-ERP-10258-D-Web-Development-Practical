@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    line-height: 1.6;
+}
+
+header {
+    background-color: navy;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: silver;
+}
+
+section {
+    padding: 40px;
+    margin: 20px 0;
+}
+
+section h2 {
+    border-bottom: 2px solid navy;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+article {
+    margin-bottom: 30px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: silver;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: navy;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: teal;
+}
+
+footer {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Hero section styles */
+.hero {
+    background-color: #f7f8fb;
+    padding: 40px 20px;
+}
+.hero-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+.hero-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.hero-content h2 {
+    margin: 0 0 8px 0;
+    color: navy;
+    font-size: 28px;
+}
+.hero-content p {
+    margin: 0 0 12px 0;
+    color: #333;
+}
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+.social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.social svg { width:20px; height:20px; }
+.social.github { background: #333; }
+.social.linkedin { background: #0077b5; }
+.social:hover { transform: translateY(-3px); opacity: 0.95; }
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    section {
+        padding: 20px;
+    }
+}
